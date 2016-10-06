@@ -1,0 +1,15 @@
+<div class="container">
+
+  <%= form_for(:user, url: registrations_path, html: {class: "form-signin"}) do |f| %>
+    <h2 class="form-signin-heading">Sign Up</h2>
+     <%= f.label :email %>
+     <%= f.email_field :email, class: 'form-control' %>
+
+     <%= f.label :password %>
+     <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.submit "Sign Up", class: "btn btn-primary" %>
+  <% end %>
+  <p>Already have an account? <%= link_to "Sign in!", new_sessions_path %></p>
+
+</div>
